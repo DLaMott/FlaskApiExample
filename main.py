@@ -16,6 +16,7 @@ class Hello(Resource):
     # corresponds to the GET request.
     # this function is called whenever there
     # is a GET request for this resource
+    # to test: Invoke-RestMethod  http://127.0.0.1:5000/
     def get(self):
         return jsonify({'message': 'hello world'})
 
@@ -26,6 +27,7 @@ class Hello(Resource):
 
 
 # another resource to calculate the square of a number
+# to test: Invoke-RestMethod  http://127.0.0.1:5000/square/number
 class Square(Resource):
 
     def get(self, num):
